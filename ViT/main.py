@@ -66,12 +66,17 @@ if __name__ == '__main__':
         if np.mean(val_acc) > best_val_acc:
             best_val_acc = np.mean(val_acc)
         epoch_iterator.set_postfix(val_acc=np.mean(val_acc), best_val_acc=best_val_acc)
-        torch.save(model.state_dict(), os.path.join('../models', "mae_pretrained.pt"))
+
     plt.plot(losses)
     plt.title('Train Loss')
+    plt.savefig("../reports/figures/train_loss.png", dpi=300, bbox_inches='tight')
     plt.figure()
+
     plt.plot(train_acc)
     plt.title('Train Accuracy')
+    plt.savefig("../reports/figures/train_acc.png", dpi=300, bbox_inches='tight')
     plt.figure()
+
     plt.plot(all_val_acc)
     plt.title('Val Accuracy')
+    plt.savefig("../reports/figures/val_acc.png", dpi=300, bbox_inches='tight')
