@@ -1,0 +1,14 @@
+ipython
+jupyterlab
+matplotlib
+notebook
+numpy
+pandas
+pip
+torch
+torchvision
+einops
+seaborn
+python-dotenv
+scikit-learn
+-e .
